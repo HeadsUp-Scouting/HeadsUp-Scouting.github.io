@@ -1,10 +1,10 @@
 let current = 0;
-const total = 4;
+const total = 6;
 let timer;
 
 function resetTimer() {
     clearInterval(timer);
-    timer = setInterval(() => window.goToSlide((current + 1) % total), 5000);
+    timer = setInterval(() => window.goToSlide((current + 1) % total), 8000);
 }
 
 window.goToSlide = function(index) {

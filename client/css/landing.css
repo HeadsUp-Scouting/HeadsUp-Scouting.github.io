@@ -141,7 +141,7 @@ h1 span {
 
 .slides {
   display: flex;
-  width: 400%;
+  width: 600%;
   transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
