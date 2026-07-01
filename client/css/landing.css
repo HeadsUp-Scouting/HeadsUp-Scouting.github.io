@@ -509,8 +509,6 @@ hr {
 @media (max-width: 900px) {
   .hero-split {
     grid-template-columns: 1fr;
-    padding: 80px 24px 40px;
-    gap: 40px;
     text-align: center;
   }
 
@@ -535,6 +533,32 @@ hr {
   .slide-mock {
     max-width: 280px;
   }
+
+   .probleme-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .step:nth-child(2),
+  .step:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .hero-split,
+  .vision-section,
+  .section-probleme,
+  .section-fiche,
+  .section--dark {
+    padding: 60px 20px;
+  }
+
+ .step {
+    gap: 24px;
+  }
+
+  .step-img {
+    max-height: 320px;
+  }
+
 }
 
 @media (max-width: 640px) {
@@ -544,5 +568,15 @@ hr {
     padding: 60px 20px;
   }
 
+
+  @media (max-height: 500px) and (max-width: 900px) {
+  .hero-split {
+    padding: 40px 20px;
+  }
+
+  .hero-phone {
+    max-height: 260px;
+  }
+}
 
 }
