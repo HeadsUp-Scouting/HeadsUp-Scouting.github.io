@@ -1,0 +1,154 @@
+:root {
+  --bg: #0A1433;
+  --surface: #141824;
+  --border: #5D707F;
+  --accent: #C9A688;
+  --accent-dim: #232B6C;
+  --text: #E1E7E3;
+  --text-dark:#0A1433;
+  --muted: #D0D7DC;
+  --radius: 10px;
+  --font-display: 'Georgia', serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(11, 15, 25, 0.92);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-cta {
+  background: var(--accent);
+  color: var(--bg) !important;
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  font-weight: 500;
+}
+
+.nav-cta:hover {
+  opacity: 0.88;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+/* FORM BASE (IMPORTANT pour contact.css) */
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+}

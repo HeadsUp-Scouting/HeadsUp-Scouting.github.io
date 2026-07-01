@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeadsUp Scouting</title>
+  <link rel="stylesheet" href="client/css/base.css">
+  <link rel="stylesheet" href="client/css/landing.css">
+  <script src="client/js/index.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">
+      <img src="client/image/HUSDarkSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      HeadsUp Scouting
+    </a>
+    <ul class="nav-links">
+      <li><a href="request-access.html" class="nav-cta">Accès limité</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
+  <section class="hero-split">
+    <div class="hero-content">
+      <div class="badge">POC · Pour scouts de hockey</div>
+      <h1>Vos notes terrain, <span>lisibles d'un coup d'œil.</span></h1>
+      <p>Vous prenez les notes. HeadsUp s'occupe de la mise en forme, de la structure et de la standardisation pour transformer chaque observation en fiches joueur claires et compréhensibles par toute l'organisation.</p>
+      <div class="cta-group">
+        <a href="request-access.html" class="btn-primary">Être invité à tester</a>
+        <a href="contact.html" class="btn-secondary">Nous écrire</a>
+      </div>
+      <p class="hero-note">Aucun engagement. On répond personnellement sous 48 h.</p>
+    </div>
+    <div class="hero-visual">
+      <img src="client/image/Phone_Home_Page.png" alt="Aperçu de l'application HeadsUp Scouting" class="hero-phone" />
+    </div>
+  </section>
+  
+
+  <hr />
+
+
+  <!-- ═══ VISION SLIDESHOW ════════════════════════════════════════════ -->
+  <section class="vision-section">
+    <div class="vision-label">La vision</div>
+    <div class="vision-title">Vers où on s'en va.</div>
+    <div class="slideshow-wrapper">
+      <div class="slides" id="slides">
+ 
+        <div class="slide">
+          <div class="slide-visual">
+            <div class="slide-mock slide-mock--radar">
+              <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="280" height="220" fill="#0F1829"/>
+                <text x="140" y="22" text-anchor="middle" font-size="11" fill="#C9A688" font-family="Inter,sans-serif" letter-spacing="1.5">PROFIL JOUEUR</text>
+ 
+                <!-- Centre -->
+                <!-- Axes (branches) du centre vers chaque sommet -->
+                <!-- cx=140, cy=110 (centre décalé vers le haut pour laisser place au texte bas) -->
+                <!-- 5 axes : haut, droite-haut, droite-bas, gauche-bas, gauche-haut -->
+                <!-- Rayon max = 62 -->
+                <!-- Points (angle de départ = -90°, sens horaire) :
+                     Patin     : 140, 48   (top)
+                     Vision    : 199, 81   (+72°)
+                     Tir       : 176, 152  (+144°)
+                     Compete   : 104, 152  (+216°)
+                     Hockey IQ : 81,  81   (+288°)
+                -->
+                <g stroke="#5D707F" stroke-opacity="0.35" stroke-width="1">
+                  <line x1="140" y1="110" x2="140" y2="48"/>
+                  <line x1="140" y1="110" x2="199" y2="81"/>
+                  <line x1="140" y1="110" x2="176" y2="152"/>
+                  <line x1="140" y1="110" x2="104" y2="152"/>
+                  <line x1="140" y1="110" x2="81"  y2="81"/>
+                </g>
+ 
+                <!-- Cercles de référence (25%, 50%, 75%, 100%) -->
+                <g fill="none" stroke="#5D707F" stroke-opacity="0.2" stroke-width="1">
+                  <!-- 25% -->
+                  <polygon points="140,94 155,103 149,121 131,121 125,103" />
+                  <!-- 50% -->
+                  <polygon points="140,79 170,96 159,131 121,131 110,96" />
+                  <!-- 75% -->
+                  <polygon points="140,63 184,89 168,142 112,142 96,89" />
+                  <!-- 100% -->
+                  <polygon points="140,48 199,81 176,152 104,152 81,81" />
+                </g>
+ 
+                <!-- Données joueur (approximation des scores: Patin 82, Vision 70, Tir 65, Compete 90, HockeyIQ 78) -->
+                <!-- Interpolation linéaire sur r=62 : score/100 * 62 -->
+                <!-- Patin 82  → r=50.8 : 140, 110-50.8 = 140,59  -->
+                <!-- Vision 70 → r=43.4 : 140+43.4*sin72=140+41.3=181, 110-43.4*cos72=110-13.4=97 -->
+                <!-- Tir 65    → r=40.3 : 140+40.3*sin144=140+23.7=164, 110+40.3*cos36... -->
+                <!-- Utiliser coordonnées polaires exactes :
+                     Patin 82: (140, 110-51) = (140,59)
+                     Vision 70: (140+43*0.951, 110-43*0.309) = (181,97)
+                     Tir 65: (140+40*0.588, 110+40*0.809) = (164,142)
+                     Compete 90: (140-56*0.588, 110+56*0.809) = (107,155) → clamp à périmètre
+                     HockeyIQ 78: (140-48*0.951, 110-48*0.309) = (94,95)
+                -->
+                <polygon
+                  points="140,59 181,97 164,142 107,145 94,95"
+                  fill="#C9A688" fill-opacity="0.15"
+                  stroke="#C9A688" stroke-width="1.5"
+                />
+ 
+                <!-- Points sur les axes -->
+                <circle cx="140" cy="59"  r="3" fill="#C9A688"/>
+                <circle cx="181" cy="97"  r="3" fill="#C9A688"/>
+                <circle cx="164" cy="142" r="3" fill="#C9A688"/>
+                <circle cx="107" cy="145" r="3" fill="#C9A688"/>
+                <circle cx="94"  cy="95"  r="3" fill="#C9A688"/>
+ 
+                <!-- Labels axes -->
+                <text x="140" y="41"  text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Patin</text>
+                <text x="207" y="82"  text-anchor="start"  font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Vision</text>
+                <text x="183" y="163" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Tir</text>
+                <text x="97"  y="163" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Compete</text>
+                <text x="73"  y="82"  text-anchor="end"    font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Hockey IQ</text>
+ 
+                <!-- Nom joueur -->
+                <text x="140" y="185" text-anchor="middle" font-size="13" fill="#E1E7E3" font-family="Georgia,serif">#17 — A. Tremblay</text>
+                <text x="140" y="200" text-anchor="middle" font-size="9"  fill="#D0D7DC" font-family="Inter,sans-serif">Centre · 6'1" · LHJMQ</text>
+              </svg>
+            </div>
+          </div>
+          <div class="slide-text">
+            <div class="slide-num">01</div>
+            <h3>Fiches joueur standardisées</h3>
+            <p>Un profil radar par joueur, construit à partir des notes brutes de chaque scout. Comparable d'un observateur à l'autre, d'une saison à l'autre.</p>
+          </div>
+        </div>
+ 
+        <div class="slide">
+          <div class="slide-visual">
+            <div class="slide-mock slide-mock--trend">
+              <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="280" height="220" fill="#0F1829"/>
+                <text x="20" y="28" font-size="11" fill="#C9A688" font-family="Inter,sans-serif" letter-spacing="1.5">PROGRESSION</text>
+                <text x="20" y="46" font-size="13" fill="#E1E7E3" font-family="Georgia,serif">#17 — A. Tremblay</text>
+                <!-- Chart area -->
+                <rect x="20" y="60" width="240" height="120" rx="4" fill="#141824" stroke="#5D707F" stroke-opacity="0.2"/>
+                <!-- Grid lines -->
+                <line x1="20" y1="90" x2="260" y2="90" stroke="#5D707F" stroke-opacity="0.15"/>
+                <line x1="20" y1="120" x2="260" y2="120" stroke="#5D707F" stroke-opacity="0.15"/>
+                <line x1="20" y1="150" x2="260" y2="150" stroke="#5D707F" stroke-opacity="0.15"/>
+                <!-- Line chart -->
+                <polyline points="36,148 96,138 156,118 196,100 240,82" fill="none" stroke="#C9A688" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="36" cy="148" r="3" fill="#C9A688"/>
+                <circle cx="96" cy="138" r="3" fill="#C9A688"/>
+                <circle cx="156" cy="118" r="3" fill="#C9A688"/>
+                <circle cx="196" cy="100" r="3" fill="#C9A688"/>
+                <circle cx="240" cy="82" r="4" fill="#C9A688" stroke="#0F1829" stroke-width="2"/>
+                <!-- Area fill -->
+                <polygon points="36,148 96,138 156,118 196,100 240,82 240,180 36,180" fill="#C9A688" fill-opacity="0.06"/>
+                <!-- Labels -->
+                <text x="36" y="192" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Oct</text>
+                <text x="96" y="192" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Nov</text>
+                <text x="156" y="192" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Déc</text>
+                <text x="196" y="192" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Jan</text>
+                <text x="240" y="192" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Fév</text>
+                <text x="246" y="80" font-size="9" fill="#C9A688" font-family="Inter,sans-serif">82</text>
+              </svg>
+            </div>
+          </div>
+          <div class="slide-text">
+            <div class="slide-num">02</div>
+            <h3>Suivi longitudinal</h3>
+            <p>La progression d'un joueur d'une observation à la suivante. Voir qui monte, qui stagne, et sur quels attributs — sur toute une saison.</p>
+          </div>
+        </div>
+ 
+        <div class="slide">
+          <div class="slide-visual">
+            <div class="slide-mock slide-mock--compare">
+              <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="280" height="220" fill="#0F1829"/>
+                <text x="140" y="22" text-anchor="middle" font-size="11" fill="#C9A688" font-family="Inter,sans-serif" letter-spacing="1.5">COMPARAISON</text>
+                <!-- Deux colonnes joueurs -->
+                <text x="70" y="42" text-anchor="middle" font-size="11" fill="#E1E7E3" font-family="Georgia,serif">A. Tremblay</text>
+                <text x="70" y="54" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">C · LHJMQ</text>
+                <text x="210" y="42" text-anchor="middle" font-size="11" fill="#E1E7E3" font-family="Georgia,serif">M. Bouchard</text>
+                <text x="210" y="54" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">LD · OHL</text>
+                <!-- Divider -->
+                <line x1="140" y1="30" x2="140" y2="210" stroke="#5D707F" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="3,3"/>
+                <!-- Attributs + barres dos-à-dos -->
+                <!-- Barres gauche : partent du centre (x=134) vers la gauche -->
+                <!-- Barres droite : partent du centre (x=146) vers la droite -->
+                <!-- Patin : Tremblay 82 > Bouchard 68 → Tremblay gagne -->
+                <text x="140" y="76" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Patin</text>
+                <rect x="30" y="79" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="49" y="79" width="85" height="7" rx="2" fill="#C9A688"/><!-- Tremblay 82, gagne, couleur accent, ancré à droite -->
+                <rect x="146" y="79" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="146" y="79" width="71" height="7" rx="2" fill="#5D707F" fill-opacity="0.5"/><!-- Bouchard 68, perd -->
+ 
+                <!-- Vision : Tremblay 70 < Bouchard 85 → Bouchard gagne -->
+                <text x="140" y="104" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Vision</text>
+                <rect x="30" y="107" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="61" y="107" width="73" height="7" rx="2" fill="#5D707F" fill-opacity="0.5"/><!-- Tremblay 70, perd -->
+                <rect x="146" y="107" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="146" y="107" width="88" height="7" rx="2" fill="#C9A688"/><!-- Bouchard 85, gagne -->
+ 
+                <!-- Tir : Tremblay 65 < Bouchard 72 → Bouchard gagne -->
+                <text x="140" y="132" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Tir</text>
+                <rect x="30" y="135" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="66" y="135" width="68" height="7" rx="2" fill="#5D707F" fill-opacity="0.5"/><!-- Tremblay 65, perd -->
+                <rect x="146" y="135" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="146" y="135" width="75" height="7" rx="2" fill="#C9A688"/><!-- Bouchard 72, gagne -->
+ 
+                <!-- Compete : Tremblay 90 > Bouchard 60 → Tremblay gagne -->
+                <text x="140" y="160" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Compete</text>
+                <rect x="30" y="163" width="104" height="7" rx="2" fill="#1E3050"stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="40" y="163" width="94" height="7" rx="2" fill="#C9A688"/><!-- Tremblay 90, gagne -->
+                <rect x="146" y="163" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="146" y="163" width="62" height="7" rx="2" fill="#5D707F" fill-opacity="0.5"/><!-- Bouchard 60, perd -->
+ 
+                <!-- Hockey IQ : Tremblay 78 < Bouchard 88 → Bouchard gagne -->
+                <text x="140" y="188" text-anchor="middle" font-size="8" fill="#D0D7DC" font-family="Inter,sans-serif">Hockey IQ</text>
+                <rect x="30" y="191" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="53" y="191" width="81" height="7" rx="2" fill="#5D707F" fill-opacity="0.5"/><!-- Tremblay 78, perd -->
+                <rect x="146" y="191" width="104" height="7" rx="2" fill="#1E3050" stroke="#5D707F" stroke-opacity="0.4"/>
+                <rect x="146" y="191" width="92" height="7" rx="2" fill="#C9A688" /><!-- Bouchard 88, gagne -->
+                <!-- Légende -->
+                <rect x="30" y="208" width="8" height="4" rx="1" fill="#C9A688"/>
+                <text x="42" y="213" font-size="7" fill="#D0D7DC" font-family="Inter,sans-serif">Tremblay</text>
+                <rect x="146" y="208" width="8" height="4" rx="1" fill="#5D707F" fill-opacity="0.7"/>
+                <text x="158" y="213" font-size="7" fill="#D0D7DC" font-family="Inter,sans-serif">Bouchard</text>
+              </svg>
+            </div>
+          </div>
+          <div class="slide-text">
+            <div class="slide-num">03</div>
+            <h3>Comparaison entre joueurs</h3>
+            <p>Deux profils côte à côte sur les mêmes attributs. Idéal pour trancher entre deux candidats ou préparer une liste de repêchage.</p>
+          </div>
+        </div>
+ 
+        <div class="slide">
+          <div class="slide-visual">
+            <div class="slide-mock slide-mock--list">
+              <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="280" height="220" fill="#0F1829"/>
+                <text x="20" y="28" font-size="11" fill="#C9A688" font-family="Inter,sans-serif" letter-spacing="1.5">LISTE DE REPÊCHAGE</text>
+                <g font-family="Inter,sans-serif">
+                  <rect x="14" y="38" width="252" height="36" rx="5" fill="#141824" stroke="#C9A688" stroke-opacity="0.5"/>
+                  <text x="28" y="54" font-size="11" fill="#E1E7E3">A. Tremblay</text>
+                  <text x="28" y="67" font-size="9" fill="#D0D7DC">C · LHJMQ</text>
+                  <text x="230" y="60" font-size="12" fill="#C9A688" font-weight="bold">91</text>
+                  <rect x="14" y="82" width="252" height="36" rx="5" fill="#141824" stroke="#5D707F" stroke-opacity="0.3"/>
+                  <text x="28" y="98" font-size="11" fill="#E1E7E3">M. Bouchard</text>
+                  <text x="28" y="111" font-size="9" fill="#D0D7DC">LD · OHL</text>
+                  <text x="230" y="104" font-size="12" fill="#D0D7DC" font-weight="bold">84</text>
+                  <rect x="14" y="126" width="252" height="36" rx="5" fill="#141824" stroke="#5D707F" stroke-opacity="0.3"/>
+                  <text x="28" y="142" font-size="11" fill="#E1E7E3">T. Paré</text>
+                  <text x="28" y="155" font-size="9" fill="#D0D7DC">G · WHL</text>
+                  <text x="230" y="148" font-size="12" fill="#D0D7DC" font-weight="bold">79</text>
+                  <rect x="14" y="170" width="252" height="36" rx="5" fill="#141824" stroke="#5D707F" stroke-opacity="0.2"/>
+                  <text x="28" y="186" font-size="11" fill="#E1E7E3" opacity="0.6">R. Léger</text>
+                  <text x="28" y="199" font-size="9" fill="#D0D7DC" opacity="0.6">C · USHL</text>
+                  <text x="230" y="192" font-size="12" fill="#D0D7DC" opacity="0.6">72</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="slide-text">
+            <div class="slide-num">04</div>
+            <h3>Classements organisationnels</h3>
+            <p>Tous les scouts, une seule liste. Les scores normalisés permettent de comparer des observations faites par des personnes différentes, dans des ligues différentes.</p>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <div class="slide-controls">
+        <button class="slide-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+        <button class="slide-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+        <button class="slide-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+        <button class="slide-dot" onclick="goToSlide(3)" aria-label="Slide 4"></button>
+      </div>
+      <p class="vision-note">Les visuels affichés sont à titre indicatif et peuvent différer du résultat final.</p>
+    </div>
+  </section>
+ 
+  <hr />
+
+  <!-- ═══ PROBLÈME ════════════════════════════════════════════════════ -->
+  <section class="section-probleme" id="probleme">
+    <div class="probleme-inner">
+      <div class="probleme-header">
+        <div class="section-label">Le problème</div>
+        <h2 class="probleme-title">Trois scouts, un même joueur, trois rapports qui se contredisent.</h2>
+      </div>
+      <div class="probleme-cards">
+        <div class="probleme-card">
+          <span class="probleme-num">01</span>
+          <h3>Calepin papier</h3>
+          <p>Notes éparpillées, lisibles seulement par celui qui les a prises. Le reste de l'équipe devine.</p>
+        </div>
+        <div class="probleme-card">
+          <span class="probleme-num">02</span>
+          <h3>Excel maison</h3>
+          <p>Chaque scout a son barème. Comparer deux joueurs prend une heure et les chiffres ne veulent pas dire la même chose.</p>
+        </div>
+        <div class="probleme-card">
+          <span class="probleme-num">03</span>
+          <h3>Rapport texte</h3>
+          <p>Le DG lit 12 pages, retient 2 lignes, et passe à la prochaine. Trop long, pas assez visuel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- ═══ FICHE STANDARDISÉE ══════════════════════════════════════════ -->
+  <section class="section-fiche" id="fiche">
+    <div class="fiche-inner">
+      <div class="section-label">Fiche standardisée</div>
+      <h2 class="fiche-title">Le carnet du jeudi soir, propre le vendredi matin.</h2>
+      <div class="fiche-svg">
+        <svg viewBox="0 0 600 360" aria-hidden="true">
+          <rect x="10" y="20" width="270" height="320" rx="6" fill="#E8EDF2" stroke="#BFC8D0" stroke-opacity="0.8"/>
+          <text x="26" y="46" font-size="10" font-family="Inter, sans-serif" fill="#5D707F" letter-spacing="2">AVANT</text>
+          <text x="26" y="66" font-size="13" font-family="Inter, sans-serif" fill="#0A1433">Carnet — 02 nov.</text>
+          <g font-family="Georgia, serif" font-size="12" fill="#2C3A4A" font-style="italic">
+            <text x="26" y="100">#17 — patine bien, mou en D</text>
+            <text x="26" y="128">tir poignet correct, pas de slap</text>
+            <text x="26" y="156">perdu mise au jeu 3/5</text>
+            <text x="26" y="184">mauvais angle sur le 2e but</text>
+            <text x="26" y="212">??? leader vestiaire ???</text>
+            <text x="26" y="240">à revoir vs Trois-Rivières</text>
+          </g>
+          <g transform="translate(290, 170)">
+            <line x1="0" y1="10" x2="20" y2="10" stroke="#C9A688" stroke-width="1.5"/>
+            <polygon points="20,4 30,10 20,16" fill="#C9A688"/>
+          </g>
+          <rect x="330" y="20" width="260" height="320" rx="6" fill="#0A1433" stroke="#C9A688" stroke-opacity="0.6"/>
+          <text x="346" y="46" font-size="10" font-family="Inter, sans-serif" fill="#C9A688" letter-spacing="2">APRÈS</text>
+          <text x="346" y="66" font-size="14" font-family="Georgia, serif" fill="#E1E7E3">#17 — A. Tremblay</text>
+          <text x="346" y="84" font-size="10" font-family="Inter, sans-serif" fill="#D0D7DC">Centre · 6'1" · LHJMQ</text>
+          <g font-family="Inter, sans-serif" font-size="10">
+            <g transform="translate(346, 110)">
+              <text x="0" y="10" fill="#D0D7DC">Patin</text>
+              <rect x="70" y="2" width="140" height="10" rx="2" fill="#1A2540" stroke="#5D707F" stroke-opacity="0.4"/>
+              <rect x="70" y="2" width="114.8" height="10" rx="2" fill="#C9A688"/>
+              <text x="218" y="10" fill="#E1E7E3">82</text>
+            </g>
+            <g transform="translate(346, 140)">
+              <text x="0" y="10" fill="#D0D7DC">Vision</text>
+              <rect x="70" y="2" width="140" height="10" rx="2" fill="#1A2540" stroke="#5D707F" stroke-opacity="0.4"/>
+              <rect x="70" y="2" width="98" height="10" rx="2" fill="#C9A688"/>
+              <text x="218" y="10" fill="#E1E7E3">70</text>
+            </g>
+            <g transform="translate(346, 170)">
+              <text x="0" y="10" fill="#D0D7DC">Tir</text>
+              <rect x="70" y="2" width="140" height="10" rx="2" fill="#1A2540" stroke="#5D707F" stroke-opacity="0.4"/>
+              <rect x="70" y="2" width="91" height="10" rx="2" fill="#C9A688"/>
+              <text x="218" y="10" fill="#E1E7E3">65</text>
+            </g>
+            <g transform="translate(346, 200)">
+              <text x="0" y="10" fill="#D0D7DC">Compete</text>
+              <rect x="70" y="2" width="140" height="10" rx="2" fill="#1A2540" stroke="#5D707F" stroke-opacity="0.4"/>
+              <rect x="70" y="2" width="126" height="10" rx="2" fill="#C9A688"/>
+              <text x="218" y="10" fill="#E1E7E3">90</text>
+            </g>
+            <g transform="translate(346, 230)">
+              <text x="0" y="10" fill="#D0D7DC">Hockey IQ</text>
+              <rect x="70" y="2" width="140" height="10" rx="2" fill="#1A2540" stroke="#5D707F" stroke-opacity="0.4"/>
+              <rect x="70" y="2" width="109.2" height="10" rx="2" fill="#C9A688"/>
+              <text x="218" y="10" fill="#E1E7E3">78</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+ 
+  <hr />
+  
+  <!-- ═══ COMMENT ═════════════════════════════════════════════════════ -->
+  <section class="section section--dark" id="comment">
+    <div class="section-label">En trois étapes</div>
+    <div class="section-title">De vos notes brutes à la fiche prête à partager.</div>
+    <div class="steps-flow">
+ 
+      <div class="step">
+        <img class="step-img step-img--left" src="client/image/listEval.png" alt="Étape prise de notes" />
+        <div class="step-text">
+          <div class="step-num">01</div>
+          <h3>Vous notez</h3>
+          <p>Comme d'habitude, vous prenez vos notes à votre façon dans l'app — en abrégé, dans votre style.</p>
+        </div>
+      </div>
+ 
+      <div class="step">
+        <div class="step-text">
+          <div class="step-num">02</div>
+          <h3>On standardise</h3>
+          <p>Vos notes brutes deviennent des barèmes communs à toute l'équipe.</p>
+        </div>
+        <img class="step-img step-img--right" src="client/image/raw.png" alt="Étape standardisation" />
+      </div>
+ 
+      <div class="step">
+        <img class="step-img step-img--left" src="client/image/rawReview.png" alt="Étape présentation" />
+        <div class="step-text">
+          <div class="step-num">03</div>
+          <h3>On présente</h3>
+          <p>Une fiche joueur claire et structurée, pour aligner toute votre organisation sur les observations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <hr />
+
+  <!-- ═══ CTA ══════════════════════════════════════════════════════════ -->
+  <div class="cta-band">
+    <h2>On cherche des recruteurs pour casser le produit.</h2>
+    <p>HeadsUp est en preuve de concept. Si vous évaluez des joueurs au junior, au collège ou au pro, on aimerait mettre l'outil entre vos mains et recueillir vos retours.</p>
+    <a href="request-access.html" class="btn-primary">Demander un accès</a>
+  </div>
+
+  <footer>
+    <span>© 2026 HeadsUp Scouting. Tous droits réservés.</span>
+    <ul class="footer-links">
+      <li><a href="contact.html">Contactez-nous</a></li>
+      <li><a href="privacy.html">Confidentialité</a></li>
+      <li><a href="terms.html">Conditions</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

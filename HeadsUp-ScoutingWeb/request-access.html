@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accès POC — HeadsUp Scouting</title>
+  <link rel="stylesheet" href="client/css/docs.css">
+  <link rel="stylesheet" href="client/css/contact.css">
+  <link rel="stylesheet" href="client/css/request-access.css">
+  <link rel="stylesheet" href="client/css/base.css">
+  <script src="client/js/request-access.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">
+      <img src="client/image/HUSDarkSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      HeadsUp Scouting
+    </a>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-header">
+      <div class="badge">Accès POC — places limitées</div>
+      <h1>Demandez un accès. <span><br>On vous répond.</br></span></h1>
+      <p>Trois champs, dix secondes. Réponse sous 48h.</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card" id="form-card">
+      <div class="field">
+        <label for="name">Nom *</label>
+        <input type="text" id="name" placeholder="Prénom et nom" />
+      </div>
+      <div class="field">
+        <label for="email">Courriel *</label>
+        <input type="email" id="email" placeholder="vous@equipe.com" />
+      </div>
+      <div class="field">
+        <label for="org">Organisation / équipe</label>
+        <input type="text" id="org" placeholder="Canadiens de Montréal" />
+      </div>
+      <button class="btn-submit" onclick="submitBeta()">Envoyer ma demande</button>
+      <p class="form-note">Aucun stockage automatique · Le formulaire ouvre votre client de courriel.</p>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success" id="success">
+      <div class="success-icon">✅</div>
+      <h2>Merci. Votre client de courriel devrait s'ouvrir.</h2>
+      <p>S'il ne s'ouvre pas, écrivez-nous directement à <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>.</p>
+      <p>On revient vers vous sous 48 h.</p>
+      <a class=".btn-ghost" href="index.html">Retour à l'accueil</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>© 2026 HeadsUp Scouting. Tous droits réservés. · POC — non affilié à la LNH ni à aucune ligue.</span>
+    <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="privacy.html">Confidentialité</a></li>
+        <li><a href="terms.html">Conditions</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

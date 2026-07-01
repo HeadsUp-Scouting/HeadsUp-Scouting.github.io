@@ -1,0 +1,31 @@
+/* Override docs grid — page pleine largeur centrée */
+.page-wrapper {
+  display: block;
+  max-width: 600px;
+  padding: 80px 24px 100px;
+}
+
+.page-header {
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.page-header h1 span {
+  color: var(--accent);
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* --- FORM CARD IS IN CONTACT.CSS --- */
+

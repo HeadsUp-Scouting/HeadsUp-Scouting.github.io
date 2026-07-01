@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — HeadsUp Scouting</title>
+  <link rel="stylesheet" href="client/css/base.css">
+  <link rel="stylesheet" href="client/css/contact.css">
+  <script src="client/js/contact.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html"><img src="client/image/HUSDarkSmallTransparentLogo.png" alt="HeadsUp Scouting logo">HeadsUp Scouting</a>
+    <ul class="nav-links">
+      <li><a href="index.html#features">Le problème</a></li>
+      <li><a href="index.html#how">Comment ça marche</a></li>
+      <li><a href="request-access.html" class="nav-cta">Accès limité</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-header">
+      <div class="badge">Contact</div>
+      <h1>Parlons-nous</h1> 
+      <p>Une question, une suggestion ou un problème ? On vous répond habituellement en moins de <strong>48 heures ouvrables</strong>.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="form-card">
+        <div id="form-content">
+          <h2>Envoyer un message</h2>
+          <div class="form-row">
+            <div class="field">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" placeholder="Jean" />
+            </div>
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" placeholder="Tremblay" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Adresse courriel</label>
+            <input type="email" id="email" placeholder="jean@example.com" />
+          </div>
+          <div class="field">
+            <label>Sujet</label>
+            <div class="custom-select" id="custom-select">
+              <div class="select-selected" onclick="toggleDropdown()">
+                <span id="select-label" style="color: var(--muted);">Choisir un sujet…</span>
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1l5 5 5-5" stroke="#7A8499" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="select-dropdown" id="select-dropdown">
+                <div class="select-option" onclick="selectOption(this)" data-value="Access">Participation à la preuve de concept</div>
+                <div class="select-option" onclick="selectOption(this)" data-value="Demo">Demande de démonstration</div>
+                <div class="select-option" onclick="selectOption(this)" data-value="Support">Support technique</div>
+                <div class="select-option" onclick="selectOption(this)" data-value="Other">Autre</div>
+              </div>
+            </div>
+            <input type="hidden" id="sujet" />
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Décrivez votre demande ou votre retour..." maxlength="1000" oninput="updateCount(this)"></textarea>
+          </div>
+          <div class="char-count"><span id="char-count">0</span> / 1000</div>
+
+          <button class="btn-submit" onclick="submitForm()">Envoyer le message →</button>
+          <p class="form-note">Aucun stockage automatique · Le formulaire ouvre votre client de courriel.</p>
+        </div>
+
+         <!-- SUCCESS -->
+        <div class="success" id="success">
+          <div class="success-icon">✅</div>
+          <h2>Merci. Votre client de courriel devrait s'ouvrir.</h2>
+          <p>S'il ne s'ouvre pas, écrivez-nous directement à <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>.</p>
+          <p>On revient vers vous sous 48 h.</p>
+          <a class=".btn-ghost" href="index.html">Retour à l'accueil</a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="info-card">
+          <h3>Coordonnées</h3>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-text">
+              <strong>Courriel général</strong>
+              <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🔒</div>
+            <div class="info-text">
+              <strong>Confidentialité</strong>
+              <a href="mailto:privacy@headsupscouting.com">privacy@headsupscouting.com</a>
+            </div>
+          </div>
+          <!--                                 *** Je ne crois pas qu'on a vraiment d'adresse ni d'heures d'ouverture ***
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <strong>Adresse</strong>
+              <span>[Adresse], [Ville]<br />Québec, Canada</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🕐</div>
+            <div class="info-text">
+              <strong>Heures d'ouverture</strong>
+              <span>Lun - Ven · 9 h à 17 h (HE)</span>
+            </div>
+          </div>
+          -->
+        </div>
+
+        <div class="info-card">
+          <h3>Questions fréquentes</h3>
+          <div class="faq-item">
+            <h4>Qu'est-ce que cette preuve de concept (POC) ?</h4>
+            <p>Cette POC permet de tester le produit dans un contexte réel avant son lancement. Elle sert à valider les fonctionnalités et à recueillir des retours d'utilisation.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Est-ce que le produit est complet ?</h4>
+            <p>Non. Il s'agit d'une version en développement. Certaines fonctionnalités peuvent évoluer ou être ajoutées en fonction des retours.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Comment puis-je obtenir du support ou partager un retour ?</h4>
+            <p>Vous pouvez nous écrire directement via le formulaire de contact. Chaque message est lu et utilisé pour améliorer le produit.</p>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 HeadsUp Scouting. Tous droits réservés.</span>
+    <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="privacy.html">Confidentialité</a></li>
+        <li><a href="terms.html">Conditions</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
