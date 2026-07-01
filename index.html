@@ -6,6 +6,7 @@
   <title>HeadsUp Scouting</title>
   <link rel="stylesheet" href="client/css/base.css">
   <link rel="stylesheet" href="client/css/landing.css">
+  <link rel="icon" href="client/image/Favicon180x180.png">
   <script src="client/js/index.js" defer></script>
 </head>
 <body>
@@ -131,6 +132,63 @@
             <p>Un profil radar par joueur, construit à partir des notes brutes de chaque scout. Comparable d'un observateur à l'autre, d'une saison à l'autre.</p>
           </div>
         </div>
+
+        <div class="slide">
+          <div class="slide-visual">
+            <div class="slide-mock slide-mock--verify">
+              <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="280" height="220" fill="#0F1829"/>
+                <text x="140" y="22" text-anchor="middle" font-size="11" fill="#C9A688" font-family="Inter,sans-serif" letter-spacing="1.5">CHOSES À VÉRIFIER</text>
+
+                <!-- Sous-titre contextuel -->
+                <text x="140" y="35" text-anchor="middle" font-size="7" fill="#5D707F" font-family="Inter,sans-serif">Éval. #17 — A. Tremblay</text>
+
+                <!-- Ligne séparatrice -->
+                <line x1="20" y1="42" x2="260" y2="42" stroke="#5D707F" stroke-opacity="0.25" stroke-width="1"/>
+
+                <!-- Carte anomalie 1 : priorité élevée -->
+                <g>
+                  <rect x="20" y="50" width="240" height="36" rx="4" fill="#16213A"/>
+                  <rect x="20" y="50" width="4" height="36" rx="2" fill="#B0503C"/>
+                  <rect x="230" y="56" width="24" height="12" rx="6" fill="#B0503C" fill-opacity="0.2"/>
+                  <text x="242" y="65" text-anchor="middle" font-size="6" fill="#B0503C" font-family="Inter,sans-serif" font-weight="600">ÉLEVÉE</text>
+                  <text x="30" y="65" font-size="8" fill="#E1E7E3" font-family="Inter,sans-serif" font-weight="600">Note tir hors norme du scout</text>
+                  <text x="30" y="78" font-size="7" fill="#D0D7DC" font-family="Inter,sans-serif">+2.3σ vs historique de l'évaluateur</text>
+                </g>
+
+                <!-- Carte anomalie 2 : priorité modérée -->
+                <g>
+                  <rect x="20" y="92" width="240" height="36" rx="4" fill="#16213A"/>
+                  <rect x="20" y="92" width="4" height="36" rx="2" fill="#C9A688"/>
+                  <rect x="222" y="98" width="32" height="12" rx="6" fill="#C9A688" fill-opacity="0.2"/>
+                  <text x="238" y="107" text-anchor="middle" font-size="6" fill="#C9A688" font-family="Inter,sans-serif" font-weight="600">MODÉRÉE</text>
+                  <text x="30" y="107" font-size="8" fill="#E1E7E3" font-family="Inter,sans-serif" font-weight="600">Écart important vs dernière visite</text>
+                  <text x="30" y="120" font-size="7" fill="#D0D7DC" font-family="Inter,sans-serif">Compete: 65 → 88 en 2 semaines</text>
+                </g>
+
+                <!-- Carte anomalie 3 : faible / à surveiller -->
+                <g>
+                  <rect x="20" y="134" width="240" height="36" rx="4" fill="#16213A"/>
+                  <rect x="20" y="134" width="4" height="36" rx="2" fill="#5D707F"/>
+                  <rect x="224" y="140" width="30" height="12" rx="6" fill="#5D707F" fill-opacity="0.25"/>
+                  <text x="239" y="149" text-anchor="middle" font-size="6" fill="#B8C2C8" font-family="Inter,sans-serif" font-weight="600">FAIBLE</text>
+                  <text x="30" y="149" font-size="8" fill="#E1E7E3" font-family="Inter,sans-serif" font-weight="600">Catégorie sous le seuil de confiance</text>
+                  <text x="30" y="162" font-size="7" fill="#D0D7DC" font-family="Inter,sans-serif">Moins de 30 évals — Hockey IQ</text>
+                </g>
+
+                <!-- Bandeau confiance globale -->
+                <rect x="20" y="178" width="240" height="24" rx="4" fill="#1D6F42" fill-opacity="0.15"/>
+                <circle cx="34" cy="190" r="4" fill="#1D6F42"/>
+                <text x="44" y="193" font-size="8" fill="#E1E7E3" font-family="Inter,sans-serif" font-weight="600">Indice de confiance: 82%</text>
+              </svg>
+            </div>
+          </div>
+          <div class="slide-text">
+            <div class="slide-num">02</div>
+            <h3>Un filet de sécurité pour tes évaluations</h3>
+            <p>Chaque évaluation est comparée à ton historique pour détecter des patterns. Quand une note sort du rythme habituel, trop élevée ou instable, on te le signale.</p>
+          </div>
+        </div>
  
         <div class="slide">
           <div class="slide-visual">
@@ -165,9 +223,59 @@
             </div>
           </div>
           <div class="slide-text">
-            <div class="slide-num">02</div>
+            <div class="slide-num">03</div>
             <h3>Suivi longitudinal</h3>
-            <p>La progression d'un joueur d'une observation à la suivante. Voir qui monte, qui stagne, et sur quels attributs — sur toute une saison.</p>
+            <p>La progression d'un joueur d'une observation à la suivante. Voir qui monte, qui stagne, et sur quels attributs clés évoluent le plus.</p>
+          </div>
+        </div>
+
+                <div class="slide">
+          <div class="slide-visual">
+            <div class="slide-mock slide-mock--network">
+              <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                <rect width="280" height="220" fill="#0F1829"/>
+                <text x="140" y="22" text-anchor="middle" font-size="11" fill="#C9A688" font-family="Inter,sans-serif" letter-spacing="1.5">COMPARAISON INTER-ORGANISATION</text>
+
+                <!-- Noeud central : ton organisation -->
+                <circle cx="140" cy="90" r="22" fill="#1D6F42" fill-opacity="0.25" stroke="#1D6F42" stroke-width="1.5"/>
+                <text x="140" y="87" text-anchor="middle" font-size="7" fill="#E1E7E3" font-family="Inter,sans-serif" font-weight="600">TON ORG</text>
+                <text x="140" y="97" text-anchor="middle" font-size="6" fill="#D0D7DC" font-family="Inter,sans-serif">42 scouts</text>
+
+                <!-- Lignes de connexion vers autres organisations -->
+                <g stroke="#5D707F" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3,2">
+                  <line x1="120" y1="75" x2="62" y2="48"/>
+                  <line x1="120" y1="105" x2="55" y2="128"/>
+                  <line x1="160" y1="75" x2="218" y2="48"/>
+                  <line x1="160" y1="105" x2="225" y2="128"/>
+                </g>
+
+                <!-- Noeuds organisations partenaires -->
+                <circle cx="52" cy="42" r="14" fill="#16213A" stroke="#5D707F" stroke-width="1"/>
+                <text x="52" y="45" text-anchor="middle" font-size="6" fill="#B8C2C8" font-family="Inter,sans-serif">LHJMQ</text>
+
+                <circle cx="46" cy="134" r="14" fill="#16213A" stroke="#5D707F" stroke-width="1"/>
+                <text x="46" y="137" text-anchor="middle" font-size="6" fill="#B8C2C8" font-family="Inter,sans-serif">Ligue B</text>
+
+                <circle cx="228" cy="42" r="14" fill="#16213A" stroke="#5D707F" stroke-width="1"/>
+                <text x="228" y="45" text-anchor="middle" font-size="6" fill="#B8C2C8" font-family="Inter,sans-serif">Ligue C</text>
+
+                <circle cx="234" cy="134" r="14" fill="#16213A" stroke="#5D707F" stroke-width="1"/>
+                <text x="234" y="137" text-anchor="middle" font-size="6" fill="#B8C2C8" font-family="Inter,sans-serif">Indép.</text>
+
+                <!-- Barre de comparaison en bas -->
+                <rect x="20" y="168" width="240" height="38" rx="4" fill="#16213A"/>
+                <text x="30" y="181" font-size="7" fill="#D0D7DC" font-family="Inter,sans-serif">#17 — A. Tremblay vs réseau</text>
+
+                <rect x="30" y="187" width="220" height="6" rx="3" fill="#0F1829"/>
+                <rect x="30" y="187" width="167" height="6" rx="3" fill="#1D6F42"/>
+                <text x="255" y="193" text-anchor="end" font-size="6" fill="#C9A688" font-family="Inter,sans-serif" font-weight="600">76e percentile</text>
+              </svg>
+            </div>
+          </div>
+          <div class="slide-text">
+            <div class="slide-num">04</div>
+            <h3>Voir au-delà de tes propres murs</h3>
+            <p>Les évaluations sont normalisées à l'échelle de ton organisation pour réduire les biais entre scouts et mieux situer chaque joueur au-delà de ton cadre actuel.</p>
           </div>
         </div>
  
@@ -230,7 +338,7 @@
             </div>
           </div>
           <div class="slide-text">
-            <div class="slide-num">03</div>
+            <div class="slide-num">05</div>
             <h3>Comparaison entre joueurs</h3>
             <p>Deux profils côte à côte sur les mêmes attributs. Idéal pour trancher entre deux candidats ou préparer une liste de repêchage.</p>
           </div>
@@ -264,7 +372,7 @@
             </div>
           </div>
           <div class="slide-text">
-            <div class="slide-num">04</div>
+            <div class="slide-num">06</div>
             <h3>Classements organisationnels</h3>
             <p>Tous les scouts, une seule liste. Les scores normalisés permettent de comparer des observations faites par des personnes différentes, dans des ligues différentes.</p>
           </div>
@@ -277,6 +385,8 @@
         <button class="slide-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
         <button class="slide-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
         <button class="slide-dot" onclick="goToSlide(3)" aria-label="Slide 4"></button>
+        <button class="slide-dot" onclick="goToSlide(4)" aria-label="Slide 5"></button>
+        <button class="slide-dot" onclick="goToSlide(5)" aria-label="Slide 6"></button>
       </div>
       <p class="vision-note">Les visuels affichés sont à titre indicatif et peuvent différer du résultat final.</p>
     </div>
