@@ -27,5 +27,15 @@
   font-size: 1rem;
 }
 
+.field input.error {
+  border: 1px solid #e53935;
+  box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.15);
+}
+
+
+.error-message:not(:empty) {
+  display: block;
+}
+
 /* --- FORM CARD IS IN CONTACT.CSS --- */
 

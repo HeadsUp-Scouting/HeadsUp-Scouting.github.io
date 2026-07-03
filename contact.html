@@ -32,22 +32,18 @@
       <div class="form-card">
         <div id="form-content">
           <h2>Envoyer un message</h2>
-          <div class="form-row">
             <div class="field">
-              <label for="prenom">Prénom</label>
-              <input type="text" id="prenom" placeholder="Jean" />
+              <label for="full-name">Nom *</label>
+              <input type="text" id="full-name" placeholder="Alex Tremblay" />
+              <small class="error-message" id="full-name-error"></small>
             </div>
-            <div class="field">
-              <label for="nom">Nom</label>
-              <input type="text" id="nom" placeholder="Tremblay" />
-            </div>
+          <div class="field">
+            <label for="email">Adresse courriel *</label>
+            <input type="email" id="email" placeholder="A.Tremblay@example.com" />
+            <small class="error-message" id="email-error"></small>
           </div>
           <div class="field">
-            <label for="email">Adresse courriel</label>
-            <input type="email" id="email" placeholder="jean@example.com" />
-          </div>
-          <div class="field">
-            <label>Sujet</label>
+            <label>Sujet *</label>
             <div class="custom-select" id="custom-select">
               <div class="select-selected" role="button" tabindex="0" onclick="toggleDropdown()" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleDropdown(); }">
                 <span id="select-label" style="color: var(--muted);">Choisir un sujet…</span>
@@ -63,15 +59,23 @@
               </div>
             </div>
             <input type="hidden" id="sujet" />
+            <small class="error-message" id="sujet-error"></small>
           </div>
 
           <div class="field">
-            <label for="message">Message</label>
+            <label for="message">Message *</label>
             <textarea id="message" placeholder="Décrivez votre demande ou votre retour..." maxlength="1000" oninput="updateCount(this)"></textarea>
+            <div class="field-footer">
+              <small class="error-message" id="message-error"></small>
+              <div class="char-count">
+                <span id="char-count">0</span> / 1000
+              </div>
+              
+            </div>
           </div>
-          <div class="char-count"><span id="char-count">0</span> / 1000</div>
+          
 
-          <button class="btn-submit" onclick="submitForm()">Envoyer le message →</button>
+          <button class="btn-submit" onclick="submitForm()">Envoyer le message</button>
           <p class="form-note">Aucun stockage automatique · Le formulaire ouvre votre client de courriel.</p>
         </div>
 
@@ -102,22 +106,7 @@
               <a href="mailto:privacy@headsupscouting.com">privacy@headsupscouting.com</a>
             </div>
           </div>
-          <!--                                 *** Je ne crois pas qu'on a vraiment d'adresse ni d'heures d'ouverture ***
-          <div class="info-item">
-            <div class="info-icon">📍</div>
-            <div class="info-text">
-              <strong>Adresse</strong>
-              <span>[Adresse], [Ville]<br />Québec, Canada</span>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">🕐</div>
-            <div class="info-text">
-              <strong>Heures d'ouverture</strong>
-              <span>Lun - Ven · 9 h à 17 h (HE)</span>
-            </div>
-          </div>
-          -->
+
         </div>
 
         <div class="info-card">
