@@ -71,8 +71,12 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.field:last-of-type {
+  margin-bottom: 32px;
 }
 
 .field label {
@@ -94,6 +98,33 @@
   transition: border-color 0.2s;
   width: 100%;
   font-weight: 500;
+}
+
+.field textarea.error,
+.field input.error,
+.custom-select.error .select-selected {
+  border: 1px solid #e53935;
+  box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.15);
+}
+
+.field-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+    margin-top: -10px;
+}
+
+.error-message {
+  display: block;
+  margin-top: -8px;
+  font-size: 0.85rem;
+  color: #e53935 !important;
 }
 
 .field input::placeholder,
@@ -124,14 +155,6 @@
 .field textarea {
     resize: vertical;
     min-height: 130px;
-}
-
-.char-count {
-    font-size: 0.78rem;
-    color: var(--muted);
-    text-align: right;
-    margin-top: -14px;
-    margin-bottom: 20px;
 }
 
 .custom-select { position: relative; user-select: none; }
