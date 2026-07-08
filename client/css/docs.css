@@ -41,7 +41,7 @@
 
 .toc a:hover {
   color: var(--text);
-  background: var(--surface);
+  background: var(--border);
 }
 
 .content header {

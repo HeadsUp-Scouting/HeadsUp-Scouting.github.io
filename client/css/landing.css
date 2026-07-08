@@ -220,12 +220,12 @@ h1 span {
    SECTION PROBLÈME — titre à gauche, cards à droite
 ══════════════════════════════════════════════════════ */
 .section-probleme {
-  background: var(--bg);
+  background: var(--text);
   padding: 100px 48px;
 }
 
 .probleme-inner {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -255,36 +255,26 @@ h1 span {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  color: var(--text);
+  color: var(--bg);
 }
 
 
 
 .probleme-card {
-  background: var(--surface);
+  background: var(--muted);
   padding: 28px 32px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
-.probleme-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: #C9A688;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
 .probleme-card h3 {
   font-size: 1.25rem;
   margin-bottom: 6px;
-  color: var(--text);
+  color: var(--bg);
 }
 
 .probleme-card p {
-  color: var(--muted);
+  color: var(--bg);
   font-size: 0.93rem;
 }
 
@@ -338,7 +328,7 @@ h1 span {
    SECTION STEPS — gardé, dark bg
 ══════════════════════════════════════════════════════ */
 .section--dark {
-  background: var(--bg);
+  background: var(--text);
   padding: 100px 48px;
 }
 
@@ -352,6 +342,7 @@ h1 span {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--border);
 }
 
 .section--dark .section-title {
@@ -362,6 +353,7 @@ h1 span {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  color: #0A1433;
 }
 
 .section--dark .steps-flow {
@@ -446,12 +438,13 @@ h1 span {
 }
 
 .step-text h3 {
+  color: var(--bg);
   font-size: 1.15rem;
   margin-bottom: 8px;
 }
 
 .step-text p {
-  color: var(--muted);
+  color: var(--bg);
   font-size: 0.93rem;
   line-height: 1.6;
 }
@@ -485,20 +478,51 @@ hr {
   border: none;
 }
 
-.cta-band {
+.cta-band,
+.cta-band-light {
   text-align: center;
   padding: 80px 24px;
-  max-width: 600px;
   margin: 0 auto;
 }
 
-.cta-band h2 {
+.cta-band {
+  max-width: 600px;
+}
+
+.cta-band-light {
+  background-color: var(--muted);
+  padding: 80px 24px;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cta-content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Titres */
+.cta-band h2,
+.cta-band-light h2 {
   font-family: var(--font-display);
   margin-bottom: 16px;
 }
 
+.cta-band h2 {
+  color: var(--text);
+}
+
+.cta-band-light h2 {
+  color: var(--bg);
+}
+
+/* Paragraphes */
 .cta-band p {
   color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.cta-band-light p {
+  color: var(--bg);
   margin-bottom: 32px;
 }
 
