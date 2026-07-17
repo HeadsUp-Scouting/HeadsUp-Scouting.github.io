@@ -12,7 +12,10 @@
 <body>
 
   <nav>
-    <a class="logo" href="index.html"><img src="client/image/HUSDarkSmallTransparentLogo.png" alt="HeadsUp Scouting logo">HeadsUp Scouting</a>
+    <a class="logo" href="index.html">
+      <img src="client/image/HUSLightSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      HeadsUp Scouting
+    </a>
     <ul class="nav-links">
       <li><a href="request-access.html" class="nav-cta">Accès limité</a></li>
     </ul>
@@ -21,7 +24,6 @@
   <div class="page-wrapper">
 
     <div class="page-header">
-      <div class="badge">Contact</div>
       <h1>Parlons-nous</h1> 
       <p>Une question, une suggestion ou un problème ? On vous répond habituellement en moins de <strong>48 heures ouvrables</strong>.</p>
     </div>
@@ -34,43 +36,41 @@
           <h2>Envoyer un message</h2>
             <div class="field">
               <label for="full-name">Nom *</label>
-              <input type="text" id="full-name" placeholder="Alex Tremblay" />
+              <input type="text" id="full-name" placeholder="Alex Tremblay" autocomplete="name"/>
               <small class="error-message" id="full-name-error"></small>
             </div>
           <div class="field">
             <label for="email">Adresse courriel *</label>
-            <input type="email" id="email" placeholder="A.Tremblay@example.com" />
+            <input type="email" id="email" placeholder="A.Tremblay@example.com" autocomplete="email" />
             <small class="error-message" id="email-error"></small>
           </div>
           <div class="field">
-            <label>Sujet *</label>
-            <div class="custom-select" id="custom-select">
-              <div class="select-selected" role="button" tabindex="0" onclick="toggleDropdown()" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleDropdown(); }">
-                <span id="select-label" style="color: var(--muted);">Choisir un sujet…</span>
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1l5 5 5-5" stroke="#7A8499" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="select-dropdown" id="select-dropdown">
-                <div class="select-option" onclick="selectOption(this)" data-value="Access">Participation à la preuve de concept</div>
-                <div class="select-option" onclick="selectOption(this)" data-value="Demo">Demande de démonstration</div>
-                <div class="select-option" onclick="selectOption(this)" data-value="Support">Support technique</div>
-                <div class="select-option" onclick="selectOption(this)" data-value="Other">Autre</div>
-              </div>
+            <label for="sujet">Sujet *</label>
+            <div class="radio-select" id="sujet" role="radiogroup" aria-labelledby="sujet-label">
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Access" onchange="clearError('sujet')">
+                <span>Participation à la preuve de concept</span>
+              </label>
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Demo" onchange="clearError('sujet')">
+                <span>Demande de démonstration</span>
+              </label>
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Support" onchange="clearError('sujet')">
+                <span>Support technique</span>
+              </label>
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Other" onchange="clearError('sujet')">
+                <span>Autre</span>
+              </label>
             </div>
-            <input type="hidden" id="sujet" />
             <small class="error-message" id="sujet-error"></small>
           </div>
-
           <div class="field">
             <label for="message">Message *</label>
-            <textarea id="message" placeholder="Décrivez votre demande ou votre retour..." maxlength="1000" oninput="updateCount(this)"></textarea>
+            <textarea id="message" placeholder="Décrivez votre demande ou votre retour..."></textarea>
             <div class="field-footer">
               <small class="error-message" id="message-error"></small>
-              <div class="char-count">
-                <span id="char-count">0</span> / 1000
-              </div>
-              
             </div>
           </div>
           
