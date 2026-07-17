@@ -1,6 +1,10 @@
 /* ══════════════════════════════════════════════════════
    HERO SPLIT
 ══════════════════════════════════════════════════════ */
+.hero-div{
+  background-color: var(--dark-bg);
+}
+
 .hero-split {
   max-width: 1200px;
   margin: 0 auto;
@@ -43,20 +47,6 @@
   width: auto;
   max-width: 100%;
   filter: drop-shadow(0 40px 80px rgba(0,0,0,0.5));
-}
-
-/* ── Badge ── */
-.badge {
-  display: inline-block;
-  background: var(--accent-dim);
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 20px;
-  margin-bottom: 24px;
 }
 
 h1 {
@@ -200,7 +190,7 @@ h1 span {
   margin: 0;
   font-size: 13px;
   line-height: 1.5;
-  color: var(--bg);
+  color: var(--text-dark);
   opacity: 0.75;
 }
 
@@ -228,7 +218,6 @@ h1 span {
    SECTION PROBLÈME — titre à gauche, cards à droite
 ══════════════════════════════════════════════════════ */
 .section-probleme {
-  background: var(--text);
   padding: 100px 48px;
 }
 
@@ -263,7 +252,7 @@ h1 span {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  color: var(--bg);
+  color: var(--text-dark);
 }
 
 
@@ -278,11 +267,11 @@ h1 span {
 .probleme-card h3 {
   font-size: 1.25rem;
   margin-bottom: 6px;
-  color: var(--bg);
+  color: var(--text-dark);
 }
 
 .probleme-card p {
-  color: var(--bg);
+  color: var(--text-dark);
   font-size: 0.93rem;
 }
 
@@ -333,7 +322,7 @@ h1 span {
 
 
 /* ══════════════════════════════════════════════════════
-   SECTION STEPS — gardé, dark bg
+   SECTION STEPS
 ══════════════════════════════════════════════════════ */
 .section--dark {
   background: var(--text);
@@ -446,13 +435,13 @@ h1 span {
 }
 
 .step-text h3 {
-  color: var(--bg);
+  color: var(--text-dark);
   font-size: 1.15rem;
   margin-bottom: 8px;
 }
 
 .step-text p {
-  color: var(--bg);
+  color: var(--text-dark);
   font-size: 0.93rem;
   line-height: 1.6;
 }
@@ -493,8 +482,12 @@ hr {
   margin: 0 auto;
 }
 
+.cta-div{
+  background-color: var(--dark-bg);
+}
+
 .cta-band {
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .cta-band-light {
@@ -520,7 +513,7 @@ hr {
 }
 
 .cta-band-light h2 {
-  color: var(--bg);
+  color: var(--text-dark);
 }
 
 /* Paragraphes */
@@ -530,7 +523,7 @@ hr {
 }
 
 .cta-band-light p {
-  color: var(--bg);
+  color: var(--text-dark);
   margin-bottom: 32px;
 }
 

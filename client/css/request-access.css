@@ -1,8 +1,17 @@
 /* Override docs grid — page pleine largeur centrée */
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-wrapper {
   display: block;
   max-width: 600px;
+  margin: 0 auto;
   padding: 80px 24px 100px;
+  flex: 1;
 }
 
 .page-header {
@@ -13,9 +22,9 @@
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.03em;
-  margin-top: 12px;
-  margin-bottom: 12px;
   line-height: 1.15;
+  margin: 12px 0;
+  color: var(--text-dark);
 }
 
 .page-header h1 span {
@@ -23,19 +32,10 @@
 }
 
 .page-header p {
-  color: var(--muted);
+  color: var(--text-dark);
   font-size: 1rem;
-}
-
-.field input.error {
-  border: 1px solid #e53935;
-  box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.15);
-}
-
-
-.error-message:not(:empty) {
-  display: block;
+  line-height: 1.7;
+  max-width: 48ch;
 }
 
 /* --- FORM CARD IS IN CONTACT.CSS --- */
-
