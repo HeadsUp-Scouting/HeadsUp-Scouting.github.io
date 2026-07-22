@@ -40,7 +40,7 @@
 }
 
 .toc a:hover {
-  background: rgba(201,166,136,.18);
+  background: var(--toc-hover);
   color: var(--dark-bg);
 }
 
@@ -140,14 +140,156 @@
   box-shadow: 0 8px 24px rgba(10,20,51,.05);
 }
 
-@media (max-width: 768px) {
+/* =====================================================
+   RESPONSIVE OVERRIDES
+===================================================== */
+
+/* Ultra Wide */
+@media (min-width:1800px) {
   .page-wrapper {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 40px 20px 80px;
+    max-width:1200px;
+  }
+
+}
+
+
+/* Desktop */
+@media (max-width:1400px) {
+  .page-wrapper {
+    max-width:1000px;
+    gap:48px;
+  }
+
+}
+
+
+/* Laptop */
+@media (max-width:1200px) {
+  .page-wrapper {
+    grid-template-columns:200px 1fr;
+    gap:40px;
+    padding-left:32px;
+    padding-right:32px;
+  }
+
+  .content header {
+    margin-bottom:40px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width:992px) {
+  .page-wrapper {
+    grid-template-columns:1fr;
+    gap:36px;
+    padding:50px 32px 90px;
   }
 
   .toc {
-    position: static;
+    position:static;
   }
+
+  .content h1 {
+    font-size:2rem;
+  }
+
+}
+
+/* Mobile Landscape / Large Mobile */
+@media (max-width:768px) {
+  .page-wrapper {
+    padding:40px 24px 70px;
+    gap:32px;
+  }
+
+  .toc-label {
+    margin-bottom:12px;
+  }
+
+  .toc ul {
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .toc a {
+    padding:8px 10px;
+    font-size:.86rem;
+  }
+
+  .content header {
+    margin-bottom:36px;
+    padding-bottom:24px;
+  }
+
+  .badge {
+    font-size:.7rem;
+  }
+
+  .content h1 {
+    font-size:1.8rem;
+    line-height:1.15;
+  }
+
+  .meta {
+    font-size:.82rem;
+  }
+
+  .section {
+    margin-bottom:40px;
+    padding-bottom:40px;
+  }
+
+  .section h2 {
+    font-size:1.2rem;
+  }
+
+  .section p {
+    line-height:1.65;
+  }
+
+  .highlight-box {
+    padding:18px;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px) {
+  .page-wrapper {
+    padding:32px 18px 60px;
+  }
+
+  .content h1 {
+    font-size:1.55rem;
+    letter-spacing:-.02em;
+  }
+
+  .badge {
+    padding:4px 10px;
+  }
+
+  .section h2 {
+    font-size:1.1rem;
+  }
+
+  .section p,
+  .section li {
+    font-size:.92rem;
+  }
+
+  .highlight-box {
+    padding:16px;
+    border-left-width:3px;
+  }
+
+}
+
+/* Mobile Landscape height optimization */
+@media (max-height:500px) and (max-width:900px) {
+  .page-wrapper {
+    padding-top:25px;
+    padding-bottom:50px;
+  }
+  
 }

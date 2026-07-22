@@ -8,6 +8,7 @@
   --text: #E1E7E3;
   --text-dark:#0a1433;
   --muted: #D0D7DC;
+  --toc-hover: #c9a6882e;
   --radius: 10px;
   --font-display: 'Georgia', serif;
   --font-body: system-ui, -apple-system, sans-serif;
@@ -142,8 +143,60 @@ button {
   cursor: pointer;
 }
 
-/* MOBILE */
+/* =====================================================
+   RESPONSIVE OVERRIDES
+===================================================== */
+
+/* Ultra Wide */
+@media (min-width: 1800px) {
+  nav,
+  footer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+}
+
+/* Desktop / Laptop */
+@media (max-width: 1400px) {
+  nav,
+  footer {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+}
+
+/* Large Tablet */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 24px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  nav {
+    padding: 18px 24px;
+  }
+
+  footer {
+    padding: 28px 24px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
   nav {
     padding: 16px 20px;
   }
@@ -157,4 +210,31 @@ button {
     text-align: center;
     padding: 24px 20px;
   }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  nav {
+    padding: 14px 16px;
+  }
+
+  footer {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo img {
+    height: 26px;
+  }
+
 }

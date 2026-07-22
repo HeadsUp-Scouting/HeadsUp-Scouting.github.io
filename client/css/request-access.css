@@ -39,3 +39,95 @@ body{
 }
 
 /* --- FORM CARD IS IN CONTACT.CSS --- */
+
+/* =====================================================
+   RESPONSIVE OVERRIDES
+===================================================== */
+
+/* Ultra Wide */
+@media (min-width:1800px) {
+  .page-wrapper {
+    max-width:650px;
+  }
+
+}
+
+/* Desktop */
+@media (max-width:1400px) {
+  .page-wrapper {
+    max-width:600px;
+  }
+
+}
+
+/* Laptop */
+@media (max-width:1200px) {
+  .page-wrapper {
+    padding-left:32px;
+    padding-right:32px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width:992px) {
+  .page-wrapper {
+    padding:60px 32px 90px;
+  }
+
+  .page-header {
+    margin-bottom:40px;
+  }
+
+}
+
+/* Mobile Landscape / Large Mobile */
+@media (max-width:768px) {
+  .page-wrapper {
+    padding:45px 24px 70px;
+  }
+
+  .page-header {
+    margin-bottom:36px;
+  }
+
+  .page-header h1 {
+    font-size:2rem;
+  }
+
+  .page-header p {
+    font-size:.95rem;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px) {
+  .page-wrapper {
+    padding:35px 18px 60px;
+  }
+
+  .page-header {
+    margin-bottom:30px;
+  }
+
+  .page-header h1 {
+    font-size:1.7rem;
+    line-height:1.2;
+  }
+
+  .page-header p {
+    font-size:.9rem;
+    line-height:1.6;
+  }
+
+}
+
+/* Mobile Landscape height optimization */
+@media (max-height:500px) and (max-width:900px) {
+  .page-wrapper {
+    padding-top:30px;
+    padding-bottom:50px;
+  }
+  
+}
