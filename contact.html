@@ -62,7 +62,7 @@
               </label>
               <label class="select-option">
                 <input type="radio" name="sujet" value="Other" onchange="clearError('sujet')">
-                <span>Autre</span>
+                <span>Autre sujet</span>
               </label>
             </div>
             <small class="error-message" id="sujet-error"></small>
@@ -75,8 +75,27 @@
             </div>
           </div>
           
+          <div class="consent-field">
+            <label class="consent-option">
+              <input type="checkbox" id="privacy-consent" />
+              <span>
+                J'ai pris connaissance de la
+                <a href="privacy.html" target="_blank" rel="noopener noreferrer">
+                  Politique de confidentialité
+                </a>
+                et des
+                <a href="terms.html" target="_blank" rel="noopener noreferrer">
+                  Conditions d'utilisation
+                </a>
+                de HeadsUp Scouting.
+              </span>
+            </label>
+            <small class="error-message" id="privacy-consent-error"></small>
+          </div>
 
-          <button class="btn-submit" onclick="submitForm()">Envoyer le message</button>
+          <button type="button" class="btn-submit" id="submit-button" onclick="submitForm()" disabled>
+            Envoyer le message
+          </button>
           <p class="form-note">Aucun stockage automatique · Le formulaire ouvre votre client de courriel.</p>
         </div>
 

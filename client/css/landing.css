@@ -554,7 +554,6 @@ hr {
 
 .vision-image-placeholder {
   width: 100%;
-  aspect-ratio: 16 / 10;
   display: flex;
   align-items: center;
   justify-content: center;
