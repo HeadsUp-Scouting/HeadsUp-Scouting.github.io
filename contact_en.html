@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,21 +14,21 @@
 <body>
 
   <nav>
-    <a class="logo" href="index.html">
+    <a class="logo" href="index_en.html">
       <img src="client/image/HUSLightSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
       HeadsUp Scouting
     </a>
     <ul class="nav-links">
-      <li><a href="contact_en.html">EN</a></li>
-      <li><a href="request-access.html" class="nav-cta">Accès limité</a></li>
+      <li><a href="contact.html">FR</a></li>
+      <li><a href="request-access_en.html" class="nav-cta">Limited Access</a></li>
     </ul>
   </nav>
 
   <div class="page-wrapper">
 
     <div class="page-header">
-      <h1>Parlons-nous</h1> 
-      <p>Une question, une suggestion ou un problème ? On vous répond habituellement en moins de <strong>48 heures ouvrables</strong>.</p>
+      <h1>Let's talk</h1> 
+      <p>A question, suggestion, or issue? We usually respond within <br><strong>48 business hours</strong>.</p>
     </div>
 
     <div class="contact-grid">
@@ -35,59 +36,59 @@
       <!-- FORM -->
       <div class="form-card">
         <div id="form-content">
-          <h2>Envoyer un message</h2>
+          <h2>Send a message</h2>
             <div class="field">
-              <label for="full-name">Nom *</label>
+              <label for="full-name">Name *</label>
               <input type="text" id="full-name" placeholder="Alex Tremblay" autocomplete="name"/>
               <small class="error-message" id="full-name-error"></small>
             </div>
           <div class="field">
-            <label for="email">Adresse courriel *</label>
+            <label for="email">Email address *</label>
             <input type="email" id="email" placeholder="A.Tremblay@example.com" autocomplete="email" />
             <small class="error-message" id="email-error"></small>
           </div>
           <div class="field">
-            <label for="sujet">Sujet *</label>
+            <label for="sujet">Subject *</label>
             <div class="radio-select" id="sujet" role="radiogroup" aria-labelledby="sujet-label">
               <label class="select-option">
                 <input type="radio" name="sujet" value="Access" onchange="clearError('sujet')">
-                <span>Participation à la preuve de concept</span>
+                <span>Participate in the proof of concept</span>
               </label>
               <label class="select-option">
                 <input type="radio" name="sujet" value="Demo" onchange="clearError('sujet')">
-                <span>Demande de démonstration</span>
+                <span>Demo request</span>
               </label>
               <label class="select-option">
                 <input type="radio" name="sujet" value="Support" onchange="clearError('sujet')">
-                <span>Support technique</span>
+                <span>Technical support</span>
               </label>
               <label class="select-option">
                 <input type="radio" name="sujet" value="Other" onchange="clearError('sujet')">
-                <span>Autre</span>
+                <span>Other</span>
               </label>
             </div>
             <small class="error-message" id="sujet-error"></small>
           </div>
           <div class="field">
             <label for="message">Message *</label>
-            <textarea id="message" placeholder="Décrivez votre demande ou votre retour..."></textarea>
+            <textarea id="message" placeholder="Describe your request or feedback..."></textarea>
             <div class="field-footer">
               <small class="error-message" id="message-error"></small>
             </div>
           </div>
           
 
-          <button class="btn-submit" onclick="submitForm()">Envoyer le message</button>
-          <p class="form-note">Aucun stockage automatique · Le formulaire ouvre votre client de courriel.</p>
+          <button class="btn-submit" onclick="submitForm()">Send message</button>
+          <p class="form-note">No automatic storage · The form opens your email client.</p>
         </div>
 
          <!-- SUCCESS -->
         <div class="success" id="success">
           <div class="success-icon">📨</div>
-          <h2>Merci. Votre client de courriel devrait s'ouvrir bientôt.</h2>
-          <p>S'il ne s'ouvre pas, écrivez-nous directement à <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>.</p>
-          <p>On revient vers vous sous 48 h.</p>
-          <a href="index.html">Retour à l'accueil</a>
+          <h2>Thank you. Your email client should open shortly.</h2>
+          <p>If it doesn't open, email us directly at <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>.</p>
+          <p>We'll get back to you within 48 hours.</p>
+          <a href="index_en.html">Back to home</a>
         </div>
       </div>
 
@@ -95,16 +96,16 @@
       <aside class="sidebar">
 
         <div class="info-card">
-          <h3>Coordonnées</h3>
+          <h3>Contact information</h3>
           <div class="info-item">
             <div class="info-text">
-              <strong>Courriel général</strong>
+              <strong>General email</strong>
               <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>
             </div>
           </div>
           <div class="info-item">
             <div class="info-text">
-              <strong>Confidentialité</strong>
+              <strong>Privacy</strong>
               <a href="mailto:privacy@headsupscouting.com">privacy@headsupscouting.com</a>
             </div>
           </div>
@@ -112,18 +113,18 @@
         </div>
 
         <div class="info-card">
-          <h3>Questions fréquentes</h3>
+          <h3>Frequently asked questions</h3>
           <div class="faq-item">
-            <h4>Est-ce que HeadsUp évalue les joueurs automatiquement?</h4>
-            <p>HeadsUp peut analyser les notes et observations saisies par le scout afin d'en dégager des tendances et de structurer l'information. Les évaluations demeurent toutefois basées sur les observations du scout.</p>
+            <h4>Does HeadsUp evaluate players automatically?</h4>
+            <p>HeadsUp can analyze notes and observations entered by the scout to identify trends and structure the information. However, evaluations remain based on the scout's observations.</p>
           </div>
           <div class="faq-item">
-            <h4>HeadsUp remplace-t-il le jugement du scout?</h4>
-            <p>Non. HeadsUp structure et met en contexte les observations du scout, mais le jugement demeure entièrement celui du professionnel. L'objectif est de rendre l'information plus facile à consulter et à exploiter, pas de décider à sa place</p>
+            <h4>Does HeadsUp replace the scout's judgment?</h4>
+            <p>No. HeadsUp structures and puts the scout's observations into context, but the judgment remains entirely with the professional. The goal is to make information easier to review and use, not to make decisions on their behalf.</p>
           </div>
           <div class="faq-item">
-            <h4>Comment puis-je obtenir du support ou partager un retour ?</h4>
-            <p>Vous pouvez nous écrire directement via le formulaire de contact. Chaque message est lu et utilisé pour améliorer le produit.</p>
+            <h4>How can I get support or share feedback?</h4>
+            <p>You can contact us directly through the contact form. Every message is read and used to improve the product.</p>
           </div>
         </div>
 
@@ -132,12 +133,12 @@
   </div>
 
   <footer>
-    <span>© 2026 HeadsUp Scouting. Une technologie propulsée par Solutions Kaho S.E.N.C. Tous droits réservés.</span>
+    <span>© 2026 HeadsUp Scouting. A technology powered by Solutions Kaho S.E.N.C. All rights reserved.</span>
     <ul class="footer-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="contact.html">Contactez-nous</a></li>
-        <li><a href="privacy.html">Confidentialité</a></li>
-        <li><a href="terms.html">Conditions</a></li>
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="contact_en.html">Contact us</a></li>
+        <li><a href="privacy_en.html">Privacy</a></li>
+        <li><a href="terms_en.html">Terms</a></li>
     </ul>
   </footer>
 </body>
