@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POC Access — HeadsUp Scouting</title>
+  <link rel="stylesheet" href="client/css/docs.css">
+  <link rel="stylesheet" href="client/css/contact.css">
+  <link rel="stylesheet" href="client/css/request-access.css">
+  <link rel="stylesheet" href="client/css/base.css">
+  <link rel="icon" href="client/image/HUSDarkSmallTransparentLogo.png"  media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="client/image/HUSLightSmallTransparentLogo.png"  media="(prefers-color-scheme: light)">
+  <script src="client/js/request-access.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index_en.html">
+      <img src="client/image/HUSLightSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      HeadsUp Scouting
+    </a>
+    <ul class="nav-links">
+      <li><a href="request-access.html">FR</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-header">
+      <h1>Request access. <span><br>We'll get back to you.</span></h1>
+      <p>Three fields, ten seconds. Response within 48 hours.</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card" id="form-card">
+      <div class="field">
+        <label for="full-name">Name *</label>
+        <input type="text" id="full-name" placeholder="Alex Tremblay" autocomplete="name"/>
+        <small class="error-message" id="full-name-error"></small>
+      </div>
+      <div class="field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="A.Tremblay@example.com" autocomplete="email"/>
+        <small class="error-message" id="email-error"></small>
+      </div>
+
+      <div class="field">
+        <label for="org">Organization / team</label>
+        <input type="text" id="org" placeholder="Montreal Canadiens" />
+        <small class="error-message" id="org-error"></small>
+      </div>
+      <button class="btn-submit" onclick="submitBeta()">Submit my request</button>
+      <p class="form-note">No automatic storage · The form opens your email client.</p>
+    </div>
+
+      <!-- SUCCESS -->
+      <div class="success" id="success">
+        <div class="success-icon">📨</div>
+        <h2>Thank you. Your email client should open shortly.</h2>
+        <p>If it doesn't open, email us directly at <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>.</p>
+        <p>We'll get back to you within 48 hours.</p>
+        <a href="index_en.html">Back to home</a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer>
+    <span>© 2026 HeadsUp Scouting. A technology powered by Solutions Kaho S.E.N.C. All rights reserved.</span>
+    <ul class="footer-links">
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="contact_en.html">Contact us</a></li>
+        <li><a href="privacy_en.html">Privacy</a></li>
+        <li><a href="terms_en.html">Terms</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

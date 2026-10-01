@@ -1,0 +1,145 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — HeadsUp Scouting</title>
+  <link rel="stylesheet" href="client/css/base.css">
+  <link rel="stylesheet" href="client/css/contact.css">
+  <link rel="icon" href="client/image/HUSDarkSmallTransparentLogo.png"  media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="client/image/HUSLightSmallTransparentLogo.png"  media="(prefers-color-scheme: light)">
+  <script src="client/js/contact.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index_en.html">
+      <img src="client/image/HUSLightSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      HeadsUp Scouting
+    </a>
+    <ul class="nav-links">
+      <li><a href="contact.html">FR</a></li>
+      <li><a href="request-access_en.html" class="nav-cta">Limited Access</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <div class="page-header">
+      <h1>Let's talk</h1> 
+      <p>A question, suggestion, or issue? We usually respond within <br><strong>48 business hours</strong>.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="form-card">
+        <div id="form-content">
+          <h2>Send a message</h2>
+            <div class="field">
+              <label for="full-name">Name *</label>
+              <input type="text" id="full-name" placeholder="Alex Tremblay" autocomplete="name"/>
+              <small class="error-message" id="full-name-error"></small>
+            </div>
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" placeholder="A.Tremblay@example.com" autocomplete="email" />
+            <small class="error-message" id="email-error"></small>
+          </div>
+          <div class="field">
+            <label for="sujet">Subject *</label>
+            <div class="radio-select" id="sujet" role="radiogroup" aria-labelledby="sujet-label">
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Access" onchange="clearError('sujet')">
+                <span>Participate in the proof of concept</span>
+              </label>
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Demo" onchange="clearError('sujet')">
+                <span>Demo request</span>
+              </label>
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Support" onchange="clearError('sujet')">
+                <span>Technical support</span>
+              </label>
+              <label class="select-option">
+                <input type="radio" name="sujet" value="Other" onchange="clearError('sujet')">
+                <span>Other</span>
+              </label>
+            </div>
+            <small class="error-message" id="sujet-error"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message *</label>
+            <textarea id="message" placeholder="Describe your request or feedback..."></textarea>
+            <div class="field-footer">
+              <small class="error-message" id="message-error"></small>
+            </div>
+          </div>
+          
+
+          <button class="btn-submit" onclick="submitForm()">Send message</button>
+          <p class="form-note">No automatic storage · The form opens your email client.</p>
+        </div>
+
+         <!-- SUCCESS -->
+        <div class="success" id="success">
+          <div class="success-icon">📨</div>
+          <h2>Thank you. Your email client should open shortly.</h2>
+          <p>If it doesn't open, email us directly at <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>.</p>
+          <p>We'll get back to you within 48 hours.</p>
+          <a href="index_en.html">Back to home</a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="info-card">
+          <h3>Contact information</h3>
+          <div class="info-item">
+            <div class="info-text">
+              <strong>General email</strong>
+              <a href="mailto:info@headsupscouting.com">info@headsupscouting.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-text">
+              <strong>Privacy</strong>
+              <a href="mailto:privacy@headsupscouting.com">privacy@headsupscouting.com</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-card">
+          <h3>Frequently asked questions</h3>
+          <div class="faq-item">
+            <h4>Does HeadsUp evaluate players automatically?</h4>
+            <p>HeadsUp can analyze notes and observations entered by the scout to identify trends and structure the information. However, evaluations remain based on the scout's observations.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Does HeadsUp replace the scout's judgment?</h4>
+            <p>No. HeadsUp structures and puts the scout's observations into context, but the judgment remains entirely with the professional. The goal is to make information easier to review and use, not to make decisions on their behalf.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How can I get support or share feedback?</h4>
+            <p>You can contact us directly through the contact form. Every message is read and used to improve the product.</p>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 HeadsUp Scouting. A technology powered by Solutions Kaho S.E.N.C. All rights reserved.</span>
+    <ul class="footer-links">
+        <li><a href="index_en.html">Home</a></li>
+        <li><a href="contact_en.html">Contact us</a></li>
+        <li><a href="privacy_en.html">Privacy</a></li>
+        <li><a href="terms_en.html">Terms</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
