@@ -9,6 +9,8 @@
   --text-dark:#0a1433;
   --muted: #D0D7DC;
   --toc-hover: #c9a6882e;
+  --error-color:#e53935; 
+  --error-box-shadow:rgba(229, 57, 53, .15);
   --radius: 10px;
   --font-display: 'Georgia', serif;
   --font-body: system-ui, -apple-system, sans-serif;

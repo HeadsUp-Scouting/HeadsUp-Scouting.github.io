@@ -49,7 +49,29 @@
         <input type="text" id="org" placeholder="Canadiens de Montréal" />
         <small class="error-message" id="org-error"></small>
       </div>
-      <button class="btn-submit" onclick="submitBeta()">Envoyer ma demande</button>
+
+      <div class="consent-field">
+        <label class="consent-option">
+          <input type="checkbox" id="privacy-consent">
+          <span>
+            J'ai pris connaissance de la
+            <a href="privacy.html" target="_blank" rel="noopener noreferrer">
+              Politique de confidentialité
+            </a>
+            et des
+            <a href="terms.html" target="_blank" rel="noopener noreferrer">
+              Conditions d'utilisation
+            </a>
+            de HeadsUp Scouting.
+          </span>
+        </label>
+        <small
+          class="error-message"
+          id="privacy-consent-error">
+        </small>
+      </div>
+
+      <button type="button" class="btn-submit" onclick="submitBeta()" disabled>Envoyer ma demande</button>
       <p class="form-note">Aucun stockage automatique · Le formulaire ouvre votre client de courriel.</p>
     </div>
 
