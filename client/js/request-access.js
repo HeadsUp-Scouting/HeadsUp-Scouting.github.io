@@ -1,6 +1,5 @@
-
 function getLanguage() {
-  return window.location.pathname.toLowerCase().includes("_en")
+  return document.documentElement.lang.startsWith("en")
     ? "en"
     : "fr";
 }
