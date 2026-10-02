@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,15 +6,15 @@
   <title>Contact — HeadsUp Scouting</title>
   <link rel="stylesheet" href="client/css/base.css">
   <link rel="stylesheet" href="client/css/contact.css">
-  <link rel="icon" href="client/image/HUSDarkSmallTransparentLogo.png"  media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="client/image/HUSLightSmallTransparentLogo.png"  media="(prefers-color-scheme: light)">
+  <link rel="icon" href="client/image/hus_dark_small_transparent_logo.png"  media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="client/image/hus_light_small_transparent_logo.png"  media="(prefers-color-scheme: light)">
   <script src="client/js/contact.js"></script>
 </head>
 <body>
 
   <nav>
     <a class="logo" href="index_en.html">
-      <img src="client/image/HUSLightSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      <img src="client/image/hus_light_small_transparent_logo.png" alt="HeadsUp Scouting logo">
       HeadsUp Scouting
     </a>
     <ul class="nav-links">
@@ -77,6 +76,23 @@
             </div>
           </div>
           
+          <div class="consent-field">
+            <label class="consent-option">
+              <input type="checkbox" id="privacy-consent" />
+              <span>
+                I have read and acknowledged the
+                <a href="privacy_en.html" target="_blank" rel="noopener noreferrer">
+                  Privacy Policy
+                </a>
+                and the
+                <a href="terms_en.html" target="_blank" rel="noopener noreferrer">
+                  Terms of Use
+                </a>
+                of HeadsUp Scouting.
+              </span>
+            </label>
+            <small class="error-message" id="privacy-consent-error"></small>
+          </div>          
 
           <button class="btn-submit" onclick="submitForm()">Send message</button>
           <p class="form-note">No automatic storage · The form opens your email client.</p>
@@ -139,6 +155,7 @@
         <li><a href="contact_en.html">Contact us</a></li>
         <li><a href="privacy_en.html">Privacy</a></li>
         <li><a href="terms_en.html">Terms</a></li>
+        <li><a href="contact.html">Français</a></li>
     </ul>
   </footer>
 </body>
