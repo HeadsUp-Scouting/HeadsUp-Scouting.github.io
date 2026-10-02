@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="client/css/contact.css">
   <link rel="stylesheet" href="client/css/request-access.css">
   <link rel="stylesheet" href="client/css/base.css">
-  <link rel="icon" href="client/image/HUSDarkSmallTransparentLogo.png"  media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="client/image/HUSLightSmallTransparentLogo.png"  media="(prefers-color-scheme: light)">
+  <link rel="icon" href="client/image/hus_dark_small_transparent_logo.png"  media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="client/image/hus_light_small_transparent_logo.png"  media="(prefers-color-scheme: light)">
   <script src="client/js/request-access.js"></script>
 </head>
 <body>
 
   <nav>
     <a class="logo" href="index_en.html">
-      <img src="client/image/HUSLightSmallTransparentLogo.png" alt="HeadsUp Scouting logo">
+      <img src="client/image/hus_light_small_transparent_logo.png" alt="HeadsUp Scouting logo">
       HeadsUp Scouting
     </a>
     <ul class="nav-links">
@@ -49,6 +49,28 @@
         <input type="text" id="org" placeholder="Montreal Canadiens" />
         <small class="error-message" id="org-error"></small>
       </div>
+
+      <div class="consent-field">
+        <label class="consent-option">
+          <input type="checkbox" id="privacy-consent">
+          <span>
+            I have read and acknowledged the
+            <a href="privacy.html" target="_blank" rel="noopener noreferrer">
+              Privacy Policy
+            </a>
+            and the
+            <a href="terms.html" target="_blank" rel="noopener noreferrer">
+              Terms of Use
+            </a>
+            of HeadsUp Scouting.
+          </span>
+        </label>
+        <small
+          class="error-message"
+          id="privacy-consent-error">
+        </small>
+      </div>
+
       <button class="btn-submit" onclick="submitBeta()">Submit my request</button>
       <p class="form-note">No automatic storage · The form opens your email client.</p>
     </div>
@@ -73,6 +95,7 @@
         <li><a href="contact_en.html">Contact us</a></li>
         <li><a href="privacy_en.html">Privacy</a></li>
         <li><a href="terms_en.html">Terms</a></li>
+        <li><a href="request-access.html">Français</a></li>
     </ul>
   </footer>
 </body>
