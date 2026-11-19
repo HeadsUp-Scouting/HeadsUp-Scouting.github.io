@@ -293,3 +293,46 @@
   }
   
 }
+
+.page-wrapper--single-column {
+  max-width: 800px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.account-deletion .content {
+  color: var(--text-dark);
+}
+
+.account-deletion .content a {
+  color: inherit;
+}
+
+.account-deletion .section ol {
+  padding-inline-start: 1.5em;
+  margin-bottom: 14px;
+}
+
+.account-deletion .section ol li + li {
+  margin-top: 8px;
+}
+
+.account-deletion-email {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.account-deletion a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.document-language {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .document-language {
+    display: block;
+    margin-top: 12px;
+  }
+}
