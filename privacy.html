@@ -58,7 +58,7 @@
           <li><strong>Dossiers de dépistage :</strong> notes, observations et évaluations structurées, ainsi que des renseignements sur les joueurs, comme leur nom, date de naissance, taille, poids et positions.</li>
           <li><strong>Informations opérationnelles :</strong> les fournisseurs d'hébergement et de surveillance peuvent traiter des données opérationnelles ou de diagnostic.</li>
         </ul>
-        <p>L'application mobile met aussi en cache des données liées au compte, à la liste de suivi, aux observations et aux notes dans une base de données SQLite locale pour permettre l'utilisation hors ligne.</p>
+        <p>L'application mobile stocke sur votre appareil certaines données liées au compte, à la liste de suivi, aux observations et aux notes pour permettre l'utilisation hors ligne.</p>
       </div>
 
       <div class="section" id="utilisation">
@@ -67,7 +67,7 @@
         <ul>
           <li>Fournir, maintenir et améliorer le service.</li>
           <li>Vous envoyer des communications liées à votre compte.</li>
-          <li>Générer des évaluations structurées à partir des commentaires des notes de dépistage au moyen d'Azure OpenAI.</li>
+          <li>Générer des évaluations structurées à partir du contenu des notes de dépistage au moyen d'un service d'IA externe.</li>
           <li>Respecter nos obligations légales et prévenir les fraudes.</li>
         </ul>
         <p>Nous ne vendons pas vos données personnelles à des tiers.</p>
@@ -77,11 +77,11 @@
         <h2>3. Partage avec des tiers</h2>
         <p>Les informations peuvent être partagées avec :</p>
         <ul>
-          <li><strong>Prestataires de services :</strong> fournisseurs qui soutiennent le service, notamment les fournisseurs d'hébergement et de surveillance. Les commentaires des notes sont transmis à Azure OpenAI pour générer des évaluations.</li>
+          <li><strong>Prestataires de services :</strong> fournisseurs qui soutiennent le service, notamment les fournisseurs d'hébergement, de surveillance et un service d'IA externe utilisé pour générer des évaluations à partir du contenu des notes.</li>
           <li><strong>Autorités légales :</strong> lorsque la loi applicable ou une ordonnance judiciaire l'exige.</li>
         </ul>
-        <p>Notre ressource Azure AI se trouve dans la région Centre du Canada, mais son déploiement de production utilise Global Standard. Pour générer les évaluations, les requêtes contenant les commentaires des notes et les réponses générées peuvent être traitées dans toute zone géographique où le modèle est déployé, y compris à l'extérieur du Québec et du Canada; l'emplacement de la ressource ne limite pas ce traitement au Canada. Consultez la <a href="https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy">documentation de Microsoft sur la confidentialité des données</a>.</p>
-        <p>Indépendamment de la génération des évaluations, Microsoft effectue une surveillance automatisée des abus. Selon Microsoft, les requêtes et les réponses signalées pour abus potentiel peuvent être échantillonnées pour une révision automatisée et, dans certains cas, examinées par du personnel autorisé de Microsoft. Consultez la <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring">documentation de Microsoft sur la surveillance des abus</a>.</p>
+        <p>Pour générer les évaluations, le contenu des notes transmis au service d'IA externe et les réponses générées peuvent être traités dans des zones géographiques à l'extérieur du Québec et du Canada. Le fait que le service soit configuré dans une région canadienne ne signifie pas que tout le traitement par l'IA se limite au Canada.</p>
+        <p>Indépendamment de la génération des évaluations, le service d'IA externe effectue une surveillance des abus. Les entrées ou sorties signalées pour abus potentiel peuvent être échantillonnées aux fins d'une révision automatisée et, dans certains cas, examinées par du personnel autorisé du fournisseur de services.</p>
         <p>Les dépisteurs devraient réviser les évaluations générées par l'IA avant de s'y fier.</p>
       </div>
 

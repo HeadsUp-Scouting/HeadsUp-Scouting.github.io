@@ -58,7 +58,7 @@
           <li><strong>Scouting records:</strong> notes, viewings, and structured evaluations, as well as player profile information such as names, dates of birth, height, weight, and positions.</li>
           <li><strong>Operational information:</strong> hosting and monitoring providers may process operational or diagnostic data.</li>
         </ul>
-        <p>The mobile application also caches account, watchlist, viewing, and note-related data in a local SQLite database to support offline use.</p>
+        <p>The mobile application stores certain account, watchlist, viewing, and note-related data on your device to support offline use.</p>
       </div>
 
       <div class="section" id="utilisation">
@@ -67,7 +67,7 @@
         <ul>
           <li>Provide, maintain, and improve the service.</li>
           <li>Send you communications related to your account.</li>
-          <li>Generate structured evaluations from scouting note comments using Azure OpenAI.</li>
+          <li>Generate structured evaluations from scouting note content using an external AI service.</li>
           <li>Comply with our legal obligations and prevent fraud.</li>
         </ul>
         <p>We do not sell your personal data to third parties.</p>
@@ -77,11 +77,11 @@
         <h2>3. Sharing with third parties</h2>
         <p>Information may be shared with:</p>
         <ul>
-          <li><strong>Service providers:</strong> providers supporting the service, including hosting and monitoring providers. Note comments are sent to Azure OpenAI to generate evaluations.</li>
+          <li><strong>Service providers:</strong> providers supporting the service, including hosting, monitoring, and an external AI service used to generate evaluations from note content.</li>
           <li><strong>Legal authorities:</strong> where required by applicable law or court order.</li>
         </ul>
-        <p>Our Azure AI resource is located in Canada Central, but its production deployment uses Global Standard. For evaluation generation, prompts containing note comments and the generated responses may be processed in any geography where the model is deployed, including outside Quebec and Canada; the resource location does not confine that processing to Canada. See <a href="https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy">Microsoft's data privacy guidance</a>.</p>
-        <p>Separately from generating evaluations, Microsoft uses automated abuse monitoring. According to Microsoft, prompts and responses flagged for potential abuse may be sampled for automated review and, in some cases, reviewed by authorized Microsoft personnel. See <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring">Microsoft's abuse monitoring guidance</a>.</p>
+        <p>To generate evaluations, note content sent to the external AI service and the generated responses may be processed in geographies outside Quebec and Canada. Configuring the service in a Canadian region does not mean that all AI processing is limited to Canada.</p>
+        <p>Separately from evaluation generation, the external AI service uses abuse monitoring. Inputs or outputs flagged for potential abuse may be sampled for automated review and, in some cases, reviewed by authorized personnel of the service provider.</p>
         <p>Scouts should review AI-generated evaluations before relying on them.</p>
       </div>
 
